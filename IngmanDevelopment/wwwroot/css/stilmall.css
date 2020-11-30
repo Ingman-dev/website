@@ -122,7 +122,7 @@ header a:hover {
     border-bottom: black 3px solid;
 }
 
-#covid .container {
+#covid .covidContainer {
     min-height: 200px;
     width: 30%;
     font-size: 20px;
@@ -197,14 +197,14 @@ footer {
     height: 70px;
     padding:20px;
     margin-top: 5px;
+    text-align: center;
     color: #ffffff;
     background-color: #282828;
     border-top: black 3px solid;
 }
 
 footer p {
-    text-align: center;
-    margin: auto;
+   
 }
 
 /* Media queries */
