@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+/* Global */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.dark {
+    padding: 15px;
+    background: #1C2833;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfields {
+    width: 90%;
+}
+
+#textarea {
+    width: 90%;
+    min-height: 70px;
+}
+
+.btn_1 {
+    font-size: 20px;
+    background-color: #f93005;
+    border: black 2px solid;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: #282828;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: Black 3px solid; 
+}
+
+header a {
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px; /* top, right, bottom, left */
+}
+
+header #brand {
+    float: left;
+}
+
+header #brand h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight {
+    color: #f93005;
+}
+
+header .current a {
+    color: #f93005;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase*/
+#showcase {
+    min-height: 400px;
+    background: url('../images/darknet.jpg') no-repeat 0;
+    background-size: cover;
+    text-align: center;
+    border-bottom: black 3px solid;
+    color: #f4f4f4;
+}
+
+#showcase h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.information {
+    font-size: 20px;
+    max-width: 50%;
+    text-align: center;
+    background-color: #1C2833;
+    margin: auto;
+}
+
+/*boxes*/
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#boxes .box img {
+    width: 100px;
+}
+
+/* Sidebar */
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+    width: 90%;
+    padding: 5px;
+}
+
+/* Main-col */
+article#main-col {
+    float: left;
+    width: 65%;
+}
+
+/*Services*/
+ul#services li {
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background:#282828;
+    color: white;
+}
+
+/* Footer */
+footer {
+    height: 70px;
+    padding:20px;
+    margin-top: 5px;
+    color: #ffffff;
+    background-color: #282828;
+    text-align: center;
+    border-top: black 3px solid;
+}
+
+/* Media queries */
+@media(max-width: 768px) {
+    header #brand,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    article#main-col,
+    aside#sidebar
+    #boxes .box {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    #showcase h1 {
+        margin-top: 40px;
+    }
+
+    #showcase {
+        background-size: auto;
+    }
+}
