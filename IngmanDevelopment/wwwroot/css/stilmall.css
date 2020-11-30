@@ -124,8 +124,11 @@ header a:hover {
 
 #covid .container {
     min-height: 200px;
+    width: 30%;
     font-size: 20px;
     font-family: Arial;
+    float: left;
+    margin: 30px
 }
 
 #covid .countries {
@@ -133,8 +136,17 @@ header a:hover {
 }
 
 #btnSubmit {
-    background-color: red;
+    background-color: orangered;
+    border: black 2px solid;
 }
+
+#sidbarCovid {
+    min-height: 200px;
+    float: right;
+    width: 70%;
+    margin: 30px;
+}
+
 /*boxes*/
 #boxes {
     margin-top: 20px;
@@ -187,8 +199,12 @@ footer {
     margin-top: 5px;
     color: #ffffff;
     background-color: #282828;
-    text-align: center;
     border-top: black 3px solid;
+}
+
+footer p {
+    text-align: center;
+    margin: auto;
 }
 
 /* Media queries */
