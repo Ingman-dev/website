@@ -1,5 +1,4 @@
-﻿@model IEnumerable<CountryDto>
-
+﻿@model SummaryDTO
 <header>
     <div class="container">
         <div id="brand">
@@ -30,13 +29,11 @@
 </section>
 <section id="covid">
     <div class="covidContainer">
-        <h2>Countries</h2>
-
-        @foreach (var country in Model)
-        {
-            <p>@Html.DisplayFor(item => country.Country)</p>
-            <br />
-        }
+        <h2>Nya bekräftade fall</h2>
+       
+                <p>@Model.Global.NewConfirmed</p>
+                <br />
+            
     </div>
     <aside id="sidebarCovid">
         <div class="covid">
