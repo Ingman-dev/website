@@ -8,6 +8,7 @@ namespace IngmanDevelopment.Models.DTO
     public class SummaryDTO
     {
         public Global Global{ get; set; }
+        public List<SummaryDetailDTO> Countries { get; set; }
 
     }
 
