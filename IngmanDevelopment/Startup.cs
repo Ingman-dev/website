@@ -26,6 +26,7 @@ namespace IngmanDevelopment
         {
             services.AddControllersWithViews();
             services.AddScoped<ICovidRepository, CovidRepository>();
+            services.AddScoped<IGithubRepository, GithubRepository>();
             //services.AddMvc();
         }
 

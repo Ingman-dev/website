@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IngmanDevelopment.Data;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,19 @@ namespace IngmanDevelopment.Controllers
 {
     public class GithubController : Controller
     {
-        public IActionResult Index()
+        private IGithubRepository githubRepository;
+
+        public GithubController(IGithubRepository githubRepository)
         {
-            return View();
+            this.githubRepository = githubRepository;
+        }
+
+        [Route("/Github")]
+
+        public async Task<IActionResult> Index()
+        {
+            var repos = await githubRepository.GetRepos();
+            return View(repos);
         }
     }
 }
