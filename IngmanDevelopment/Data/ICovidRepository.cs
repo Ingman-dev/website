@@ -8,7 +8,7 @@ namespace IngmanDevelopment.Data
 {
     public interface ICovidRepository
     {
-        Task<IEnumerable<CountryDto>> GetCountries();
+        Task<IEnumerable<CountryDTO>> GetCountries();
         Task<SummaryDTO> GetSummary();
     }
 }

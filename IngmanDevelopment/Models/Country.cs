@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IngmanDevelopment.Models.DTO
+namespace IngmanDevelopment.Models
 {
-    public class CountryDTO
+    public class Country
     {
-        public string Country { get; set; }
+        public string Name { get; set; }
     }
 }

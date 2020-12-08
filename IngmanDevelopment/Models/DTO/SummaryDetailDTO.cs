@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace IngmanDevelopment.Models.DTO
 {
-    public class CountryDTO
+    public class SummaryDetailDTO
     {
-        public string Country { get; set; }
+
     }
 }

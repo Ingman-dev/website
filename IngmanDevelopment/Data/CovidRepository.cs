@@ -18,7 +18,7 @@ namespace IngmanDevelopment.Data
             baseUrl = configuration.GetValue<string>("CovidApi:BaseUrl");
         }
 
-        public async Task <IEnumerable<CountryDto>> GetCountries()
+        public async Task <IEnumerable<CountryDTO>> GetCountries()
         {
             using (HttpClient client = new HttpClient())
             {
@@ -26,7 +26,7 @@ namespace IngmanDevelopment.Data
                 var response = await client.GetAsync(endpoint, HttpCompletionOption.ResponseHeadersRead);
                 response.EnsureSuccessStatusCode();
                 var data = await response.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<IEnumerable<CountryDto>>(data);
+                var result = JsonConvert.DeserializeObject<IEnumerable<CountryDTO>>(data);
                 return result;
             }
         }

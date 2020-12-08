@@ -1,4 +1,5 @@
 ﻿using IngmanDevelopment.Models.DTO;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,28 @@ namespace IngmanDevelopment.Models.ViewModels
         public int TotalRecovered { get; set; }
         public DateTime Date { get; set; }
 
-        public SummaryViewModel()
+        private List<Country> countries;
+
+
+        public string SelectedCountry { get; set; }
+        public IEnumerable<SelectListItem> Countries
+        {
+            get
+            {
+                if(countries != null)
+                {
+                    return countries.Select(x =>
+                    new SelectListItem()
+                    {
+                        Text = x.Name,
+                        Value = x.Name
+                    });
+                }
+                return null;
+            }
+        }
+
+        public SummaryViewModel(CountryDTO country, SummaryDetailDTO summaryDetail)
         {
 
         }
