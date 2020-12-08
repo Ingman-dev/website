@@ -2,7 +2,7 @@
 <html lang="sv-se">
 <head>
     <meta charset="utf8">
-    <meta name="viewport" content="width = device-width">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
     <meta name="description" content="Ingman Development">
     <meta name="author" content="Morten Ingman">
     <title>Ingman Development</title>
@@ -10,9 +10,11 @@
 </head>
 <body>
     @RenderBody()
-    <footer>
-        <p>Morten Ingman, Copyright &copy; 2020<br>morten.ingman@ingmandev.se</p>
-    </footer>
+    <div id="footer">
+        <footer>
+            <p>Morten Ingman, Copyright &copy; 2020<br>morten.ingman@ingmandev.se</p>
+        </footer>
+    </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="~/js/main.js"></script>
 </body>

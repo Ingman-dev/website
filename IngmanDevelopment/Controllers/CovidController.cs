@@ -1,5 +1,6 @@
 ﻿using IngmanDevelopment.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace IngmanDevelopment.Controllers
             this.covidRepository = covidRepository;
         }
 
-        [Route("")]
+        [Route("/Covid")]
 
         public async Task<IActionResult> Index()
         {

@@ -117,14 +117,14 @@ header a:hover {
 /*ShowcaseCovid*/
 #showcaseCovid {
     background: url('../images/covid-19.jpg') no-repeat;
-    height: 500px;
+    min-height: 500px;
     background-size: cover;
     border-bottom: black 3px solid;
 }
 
 #covid .covidContainer {
     min-height: 200px;
-    width: 30%;
+    width: 100%;
     font-size: 20px;
     font-family: Arial;
     float: left;
@@ -193,14 +193,16 @@ ul#services li {
 }
 
 /* Footer */
-footer {
+#footer {
+    position: sticky;
+    bottom: 0;
     height: 70px;
-    padding:20px;
-    margin-top: 5px;
+    width: 100%;
     text-align: center;
     color: #ffffff;
     background-color: #282828;
     border-top: black 3px solid;
+    margin: auto;
 }
 
 footer p {

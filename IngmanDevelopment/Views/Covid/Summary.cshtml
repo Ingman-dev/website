@@ -8,7 +8,8 @@
             <ul>
                 <li><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>
-                <li class="current"><a href="covid">Covid-19</a></li>
+                <li><a href="github">Github</a></li>
+                <li class="current"><a href="Covid">Covid-19</a></li>
                 <li><a href="http://www.movieinfo.ingmandev.se">MovieSearch</a></li>
                 <li><a href="http://www.reloading.ingmandev.se">Reloading</a></li>
             </ul>
@@ -30,10 +31,23 @@
 <section id="covid">
     <div class="covidContainer">
         <h2>Nya bekräftade fall</h2>
-       
-                <p>@Model.Global.NewConfirmed</p>
-                <br />
-            
+        <p>@Model.Global.NewConfirmed</p>
+        <br />
+        <h2>Totala bekräftade fall</h2>
+        <p>@Model.Global.TotalConfirmed</p>
+        <br />
+        <h2>Totala antalet dödsfall</h2>
+        <p>@Model.Global.TotalDeaths</p>
+        <br />
+        <h2>Nya dödsfall</h2>
+        <p>@Model.Global.NewDeaths</p>
+        <br />
+        <h2>Antal nya friskförklarade</h2>
+        <p>@Model.Global.NewRecovered</p>
+        <br />
+        <h2>Totala antalet friskförklarade</h2>
+        <p>@Model.Global.TotalRecovered</p>
+        <br />
     </div>
     <aside id="sidebarCovid">
         <div class="covid">
@@ -44,3 +58,7 @@
         </div>
     </aside>
 </section>
+
+         
+         
+        
