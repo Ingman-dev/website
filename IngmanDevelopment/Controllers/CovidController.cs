@@ -21,8 +21,8 @@ namespace IngmanDevelopment.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var countries = await covidRepository.GetCountries();
-            return View(countries);
+            var viewModel = await covidRepository.GetSummaryViewModel();
+            return View(viewModel);
         }
 
         public async Task<IActionResult> Summary()

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,8 +20,9 @@ namespace IngmanDevelopment.Models.ViewModels
 
         private List<Country> countries;
 
-
         public string SelectedCountry { get; set; }
+
+        [Display(Name = "Välj land")]
         public IEnumerable<SelectListItem> Countries
         {
             get
@@ -38,7 +40,28 @@ namespace IngmanDevelopment.Models.ViewModels
             }
         }
 
-        public SummaryViewModel(CountryDTO country, SummaryDetailDTO summaryDetail)
+        public SummaryViewModel(IEnumerable<CountryDTO> countries, SummaryDetailDTO summaryDetail)
+        {
+            //ger alla värden till våra properties
+            NewConfirmed = summaryDetail.NewConfirmed;
+            TotalConfirmed = summaryDetail.TotalConfirmed;
+            NewDeaths = summaryDetail.NewDeaths;
+            TotalDeaths = summaryDetail.TotalDeaths;
+            NewRecovered = summaryDetail.NewRecovered;
+            TotalRecovered = summaryDetail.TotalRecovered;
+            Date = summaryDetail.Date;
+
+            //gör om CountryDTO till en lista av countries
+            this.countries = countries
+                .Select(c => new Country
+                {
+                    Name = c.Country
+                })
+                .OrderBy(x => x.Name)
+                .ToList();
+        }
+
+        public SummaryViewModel()
         {
 
         }
