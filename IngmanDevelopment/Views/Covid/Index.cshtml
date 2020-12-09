@@ -35,7 +35,7 @@
     <div class="covidContainer">
         <form asp-action="Index" method="get">
             <h2>@Html.DisplayNameFor(x => x.Countries)</h2>
-            <p>@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land") </p>
+            <p>@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land", new { @onchange = "onChange(this.AddHtmlAttributeValue)"}) </p>
             <button type="submit">Ok</button> />
         </form>
     </div>
