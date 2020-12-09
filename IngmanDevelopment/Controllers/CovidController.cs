@@ -1,4 +1,5 @@
 ﻿using IngmanDevelopment.Data;
+using IngmanDevelopment.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -26,9 +27,9 @@ namespace IngmanDevelopment.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(string selectedCountry)
+        public async Task<IActionResult> Index(SummaryViewModel model)
         {
-            var viewModel = await covidRepository.GetSummaryViewModel(selectedCountry);
+            var viewModel = await covidRepository.GetSummaryViewModel(model.SelectedCountry);
             return View(viewModel);
         }
 

@@ -19,7 +19,7 @@ namespace IngmanDevelopment.Data
             baseUrl = configuration.GetValue<string>("CovidApi:BaseUrl");
         }
 
-        public async Task <IEnumerable<CountryDTO>> GetCountries()
+        public async Task<IEnumerable<CountryDTO>> GetCountries()
         {
             using (HttpClient client = new HttpClient())
             {
