@@ -31,35 +31,42 @@
 </section>
 <section id="covid">
     <div class="covidContainer">
-        <h2>@Html.DisplayNameFor(x => x.Countries)</h2>
-            <p>@Html.DropDownListFor(x => Model.Countries, new SelectList(Model.Countries, "Value", "Text"), "Välj land") </p>
+        <form asp-action="Index">
+            <h2>@Html.DisplayNameFor(x => x.Countries)</h2>
+            <p>@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land") </p>
+            <button type="submit">Ok</button> />
+        </form>
     </div>
-    <aside id="sidebarCovid">
-        <div class="covid">
-            <h1>Country</h1>
+    
+        <aside id="sidebarCovid">
+            <div class="covid">
+                <h1>Country</h1>
 
-            <p>@Html.DisplayNameFor(model => model.NewConfirmed)</p>
-            <p>@Html.DisplayFor(model => model.NewConfirmed)</p>
+                <p>@Html.DisplayNameFor(model => model.NewConfirmed)</p>
+                <p>@Html.DisplayFor(model => model.NewConfirmed)</p>
 
-            <p>@Html.DisplayNameFor(model => model.TotalConfirmed)</p>
-            <p>@Html.DisplayFor(model => model.TotalConfirmed)</p>
+                <p>@Html.DisplayNameFor(model => model.TotalConfirmed)</p>
+                <p>@Html.DisplayFor(model => model.TotalConfirmed)</p>
 
-            <p>@Html.DisplayNameFor(model => model.NewDeaths)</p>
-            <p>@Html.DisplayFor(model => model.NewDeaths)</p>
+                <p>@Html.DisplayNameFor(model => model.NewDeaths)</p>
+                <p>@Html.DisplayFor(model => model.NewDeaths)</p>
 
-            <p>@Html.DisplayNameFor(model => model.TotalDeaths)</p>
-            <p>@Html.DisplayFor(model => model.TotalDeaths)</p>
+                <p>@Html.DisplayNameFor(model => model.TotalDeaths)</p>
+                <p>@Html.DisplayFor(model => model.TotalDeaths)</p>
 
-            <p>@Html.DisplayNameFor(model => model.NewRecovered)</p>
-            <p>@Html.DisplayFor(model => model.NewRecovered)</p>
+                <p>@Html.DisplayNameFor(model => model.NewRecovered)</p>
+                <p>@Html.DisplayFor(model => model.NewRecovered)</p>
 
-            <p>@Html.DisplayNameFor(model => model.TotalRecovered)</p>
-            <p>@Html.DisplayFor(model => model.TotalRecovered)</p>
+                <p>@Html.DisplayNameFor(model => model.TotalRecovered)</p>
+                <p>@Html.DisplayFor(model => model.TotalRecovered)</p>
 
-            <p>@Html.DisplayNameFor(model => model.Date)</p>
-            <p>@Html.DisplayFor(model => model.Date)</p>
+                <p>@Html.DisplayNameFor(model => model.Date)</p>
+                <p>@Html.DisplayFor(model => model.Date)</p>
 
 
-        </div>
-    </aside>
+            </div>
+
+        </aside>
+    
+
 </section>

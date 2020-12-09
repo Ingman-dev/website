@@ -10,6 +10,7 @@ namespace IngmanDevelopment.Models.ViewModels
 {
     public class SummaryViewModel
     {
+        [Display(Name ="Nya Bekräftade fall")]
         public int NewConfirmed { get; set; }
         public int TotalConfirmed { get; set; }
         public int NewDeaths { get; set; }
@@ -20,7 +21,7 @@ namespace IngmanDevelopment.Models.ViewModels
 
         private List<Country> countries;
 
-        public string SelectedCountry { get; set; }
+        public string SelectedCountry { get; set; } = "Sweden";
 
         [Display(Name = "Välj land")]
         public IEnumerable<SelectListItem> Countries
