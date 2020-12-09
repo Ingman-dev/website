@@ -1,4 +1,5 @@
 using IngmanDevelopment.Data;
+using IngmanDevelopment.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace IngmanDevelopment
             services.AddControllersWithViews();
             services.AddScoped<ICovidRepository, CovidRepository>();
             services.AddScoped<IGithubRepository, GithubRepository>();
+            services.AddScoped<IApiClient, ApiClient>();
             //services.AddMvc();
         }
 
