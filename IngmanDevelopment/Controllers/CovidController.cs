@@ -25,6 +25,7 @@ namespace IngmanDevelopment.Controllers
             return View(viewModel);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index(string selectedCountry)
         {
             var viewModel = await covidRepository.GetSummaryViewModel(selectedCountry);

@@ -21,7 +21,7 @@ namespace IngmanDevelopment.Models.ViewModels
 
         private List<Country> countries;
 
-        public string SelectedCountry { get; set; } = "Sweden";
+        public string SelectedCountry { get; set; } = "Sweden"; // Sverige är defaultvärde.
 
         [Display(Name = "Välj land")]
         public IEnumerable<SelectListItem> Countries
