@@ -19,18 +19,23 @@ namespace IngmanDevelopment.Controllers
         }
 
         [Route("/Covid")]
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             var viewModel = await covidRepository.GetSummaryViewModel();
+            watch.Stop();
+            var time = watch.ElapsedMilliseconds;
             return View(viewModel);
         }
 
-        [HttpGet]
+        [HttpGet("covid/index")]
         public async Task<IActionResult> Index(SummaryViewModel model)
         {
+            ModelState.Clear();
             var viewModel = await covidRepository.GetSummaryViewModel(model.SelectedCountry);
-            return View(viewModel);
+            viewModel.SelectedCountry = model.SelectedCountry;
+            return View("Index", viewModel);
         }
 
         public async Task<IActionResult> Summary()

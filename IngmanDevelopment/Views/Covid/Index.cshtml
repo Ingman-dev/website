@@ -32,16 +32,12 @@
     </div>
 </section>
 <section id="covid">
-    <form asp-action="Index" method="get">
+    <form asp-action="Index" asp-controller="covid" method="get">
         <div class="covidContainer">
 
             <h2>@Html.DisplayNameFor(x => x.Countries)</h2>
-            <p>@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land", new { @onchange = "onChange(this.AddHtmlAttributeValue)" }) </p>
-
-
-
+            <p>@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land", new { @onchange = "onChange(this.value)" }) </p>
         </div>
-
         <aside id="sidebarCovid">
             <div class="covid">
                 <h1></h1>
@@ -66,11 +62,7 @@
 
                 <p>@Html.DisplayNameFor(model => model.Date)</p>
                 <p>@Html.DisplayFor(model => model.Date)</p>
-
-
             </div>
-
         </aside>
-
     </form>
 </section>

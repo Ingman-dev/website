@@ -10,19 +10,26 @@ namespace IngmanDevelopment.Models.ViewModels
 {
     public class SummaryViewModel
     {
-        [Display(Name ="Nya Bekräftade fall")]
+        [Display(Name = "Nya Bekräftade fall")]
+        [DisplayFormat(DataFormatString = "{0:N0} st")]
         public int NewConfirmed { get; set; }
-        [Display(Name = "Totalt antal Bekräftade fall")]
+        [Display(Name = "Totala antalet Bekräftade fall")]
+        [DisplayFormat(DataFormatString = "{0:N0} st")]
         public int TotalConfirmed { get; set; }
         [Display(Name = "Nya Bekräftade döda")]
+        [DisplayFormat(DataFormatString = "{0:N0} st")]
         public int NewDeaths { get; set; }
-        [Display(Name = "Totalt antal Bekräftade döda")]
+        [Display(Name = "Totala antalet Bekräftade döda")]
+        [DisplayFormat(DataFormatString = "{0:N0} st")]
         public int TotalDeaths { get; set; }
         [Display(Name = "Nya Tillfrisknade")]
+        [DisplayFormat(DataFormatString = "{0:N0} st")]
         public int NewRecovered { get; set; }
-        [Display(Name = "Totalt antal tillfrisknade")]
+        [Display(Name = "Totala antalet tillfrisknade")]
+        [DisplayFormat(DataFormatString = "{0:N0} st")]
         public int TotalRecovered { get; set; }
         [Display(Name = "Datum")]
+        [DisplayFormat(DataFormatString ="{0:dddd dd MMMM}")]
         public DateTime Date { get; set; }
 
         private List<Country> countries;

@@ -12,5 +12,6 @@ namespace IngmanDevelopment.Data
         Task<IEnumerable<CountryDTO>> GetCountries();
         Task<SummaryDTO> GetSummary();
         Task<SummaryViewModel> GetSummaryViewModel(string country = null);
+        
     }
 }
