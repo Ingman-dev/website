@@ -38,7 +38,7 @@ namespace IngmanDevelopment.Data
             country = country ?? defaultCountry;
             var tasks = new List<Task>(); // en lista med olika trådar
 
-            var countries = apiClient.GetAsync<IEnumerable<CountryDTO>>(baseUrl + "countries"); // ett nytt uppdrag
+            var countries =  apiClient.GetAsync<IEnumerable<CountryDTO>>(baseUrl + "countries"); // ett nytt uppdrag
             var summary = apiClient.GetAsync<SummaryDTO>(baseUrl + "summary"); // ännu ett uppdrag
 
             tasks.Add(countries); // koppla ihop uppdraget med trådarna
