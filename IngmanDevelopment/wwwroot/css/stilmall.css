@@ -123,12 +123,13 @@ header a:hover {
 }
 
 #covid .covidContainer {
-    min-height: 200px;
-    width: 100%;
+    height: 500px;
+    width: 40%;
     font-size: 20px;
     font-family: Arial;
     float: left;
-    margin: 30px
+    margin: 30px;
+    float: left;
 }
 
 #covid .countries {
@@ -141,9 +142,9 @@ header a:hover {
 }
 
 #sidbarCovid .covid {
-    min-height: 200px;
+    height: 500px;
     float: right;
-    width: 70%;
+    width: 60%;
     margin: 30px;
 }
 

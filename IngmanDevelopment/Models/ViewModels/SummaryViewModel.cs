@@ -12,11 +12,17 @@ namespace IngmanDevelopment.Models.ViewModels
     {
         [Display(Name ="Nya Bekräftade fall")]
         public int NewConfirmed { get; set; }
+        [Display(Name = "Totalt antal Bekräftade fall")]
         public int TotalConfirmed { get; set; }
+        [Display(Name = "Nya Bekräftade döda")]
         public int NewDeaths { get; set; }
+        [Display(Name = "Totalt antal Bekräftade döda")]
         public int TotalDeaths { get; set; }
+        [Display(Name = "Nya Tillfrisknade")]
         public int NewRecovered { get; set; }
+        [Display(Name = "Totalt antal tillfrisknade")]
         public int TotalRecovered { get; set; }
+        [Display(Name = "Datum")]
         public DateTime Date { get; set; }
 
         private List<Country> countries;
