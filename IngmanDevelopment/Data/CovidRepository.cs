@@ -14,11 +14,12 @@ namespace IngmanDevelopment.Data
 {
     public class CovidRepository : ICovidRepository
     {
-        private string baseUrl;
+        private string baseUrl, defaultCountry;
         IApiClient apiClient;
         public CovidRepository(IConfiguration configuration, IApiClient apiClient)
         {
             baseUrl = configuration.GetValue<string>("CovidApi:BaseUrl");
+            defaultCountry = configuration.GetValue<string>("CovidApi:DefaultCountry");
             this.apiClient = apiClient;
         }
 

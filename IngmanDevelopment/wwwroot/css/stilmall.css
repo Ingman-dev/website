@@ -140,7 +140,7 @@ header a:hover {
     border: black 2px solid;
 }
 
-#sidbarCovid {
+#sidbarCovid .covid {
     min-height: 200px;
     float: right;
     width: 70%;
