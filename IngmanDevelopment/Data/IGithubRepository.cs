@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace IngmanDevelopment.Data
 {
-    public interface IGithubRepository
-    {
-        Task<IEnumerable<ReposDTO>> GetRepos();
-    }
+    //public interface IGithubRepository
+    //{
+    //    Task<IEnumerable<ReposDTO>> GetRepos();
+    //}
 }
