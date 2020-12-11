@@ -36,7 +36,7 @@
         <div class="covidContainer">
 
             <h2>@Html.DisplayNameFor(x => x.Countries)</h2>
-            <p>@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land", new { @onchange = "onChange(this.value)" }) </p>
+            <p class="coutries">@Html.DropDownListFor(x => Model.SelectedCountry, new SelectList(Model.Countries, "Value", "Text"), "Välj land", new { @onchange = "onChange(this.value)" }) </p>
         </div>
         <aside id="sidebarCovid">
             <div class="covid">

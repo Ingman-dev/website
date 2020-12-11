@@ -133,7 +133,7 @@ header a:hover {
 }
 
 #covid .countries {
-    min-width: 200px;
+    width: 100px;
 }
 
 #btnSubmit {
@@ -173,7 +173,7 @@ header a:hover {
 }
 
 /* Sidebar */
-aside#sidebar{
+/*aside#sidebar{
     float: right;
     width: 30%;
     margin-top: 10px;
@@ -182,7 +182,7 @@ aside#sidebar{
 aside#sidebar .quote input, aside#sidebar .quote textarea {
     width: 90%;
     padding: 5px;
-}
+}*/
 
 /* Main-col */
 article#main-col {
@@ -225,11 +225,16 @@ footer p {
     #newsletter h1,
     #newsletter form,
     article#main-col,
-    aside#sidebar
-    #boxes .box {
+    #sidbarCovid .covid,
+    #boxes .box,
+    #covid .covidContainer {
         float: none;
         text-align: center;
         width: 100%;
+    }
+
+    #covid .covidContainer {
+        height: 100px;
     }
 
     header {
