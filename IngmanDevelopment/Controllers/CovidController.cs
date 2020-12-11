@@ -18,7 +18,7 @@ namespace IngmanDevelopment.Controllers
             this.covidRepository = covidRepository;
         }
 
-        [Route("/Covid")]
+        //[Route("/covid")]
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -38,6 +38,7 @@ namespace IngmanDevelopment.Controllers
             return View("Index", viewModel);
         }
 
+        
         public async Task<IActionResult> Summary()
         {
             var summary = await covidRepository.GetSummary();
