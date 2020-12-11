@@ -184,6 +184,10 @@ aside#sidebar .quote input, aside#sidebar .quote textarea {
     padding: 5px;
 }
 
+#space {
+    width: 100%;
+    min-height: 50px;
+}
 /* Main-col */
 article#main-col {
     float: left;
