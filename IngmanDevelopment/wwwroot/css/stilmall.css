@@ -227,7 +227,8 @@ footer p {
     article#main-col,
     #sidbarCovid .covid,
     #boxes .box,
-    #covid .covidContainer {
+    #covid .covidContainer,
+    aside#sidebar {
         float: none;
         text-align: center;
         width: 100%;
