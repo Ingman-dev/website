@@ -148,6 +148,13 @@ header a:hover {
     margin: 30px;
 }
 
+.reposContainer {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+}
+
 /*boxes*/
 #boxes {
     margin-top: 20px;
