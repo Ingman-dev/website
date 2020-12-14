@@ -19,9 +19,9 @@ function sendEmail(name, mail, subject, message) {
         SecureToken: "f1075cd9-1051-4179-84c8-61e649cff147",
         To: "morten.ingman@ingmandev.se",
         From: "form@ingmandev.se",
-        Subject: `${name} sent you a message`,
+        Subject: `${name} har skickat ett meddelande.`,
         Body: `Name: ${name} <br/> Email: ${mail} <br/> Subject: ${subject} <br/> Message: ${message}`,
-    }).then((message) => alert("Email sent sucessfully"))
+    }).then((message) => alert("Meddelandet har skickats!"))
 } 
 
 
