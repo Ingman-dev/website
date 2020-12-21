@@ -32,13 +32,13 @@ namespace IngmanDevelopment.Data
         {
             return await apiClient.GetAsync<SummaryDTO>(baseUrl + "summary");
         }
-
+        
         public async Task<SummaryViewModel> GetSummaryViewModel(string country = null)
         {
             country = country ?? defaultCountry;
             var tasks = new List<Task>(); // en lista med olika trådar
 
-            var countries =  apiClient.GetAsync<IEnumerable<CountryDTO>>(baseUrl + "countries"); // ett nytt uppdrag
+            var countries = apiClient.GetAsync<IEnumerable<CountryDTO>>(baseUrl + "countries"); // ett nytt uppdrag
             var summary = apiClient.GetAsync<SummaryDTO>(baseUrl + "summary"); // ännu ett uppdrag
 
             tasks.Add(countries); // koppla ihop uppdraget med trådarna
@@ -50,7 +50,7 @@ namespace IngmanDevelopment.Data
                 .FirstOrDefault();
             return new SummaryViewModel(countries.Result, summaryDetail);
         }
-
+        
         public Task<IEnumerable<CountryDTO>> GetSummaryViewModel()
         {
             throw new NotImplementedException();
