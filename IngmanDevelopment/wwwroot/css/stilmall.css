@@ -91,6 +91,10 @@ header a:hover {
     font-weight: bold;
 }
 
+.headline {
+    font-weight: bold;
+}
+
 /* Showcase*/
 #showcase {
     min-height: 400px;
