@@ -164,6 +164,11 @@ header a:hover {
     margin-top: 20px;
 }
 
+.boxes-headline {
+    text-align: center;
+    font-weight: 700
+}
+
 #boxes .box {
     float: left;
     text-align: center;
